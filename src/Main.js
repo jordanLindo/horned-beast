@@ -6,10 +6,10 @@ class Main extends React.Component{
         return(
             <main>
                 <HornedBeast title="Narwhal" 
-                imageUrl="public\Holloway-Narwhals.jpg"
+                imageUrl="/Holloway-Narwhals.jpg"
                 description="Unicorn of the sea. - Photograph from Alamy" />
                 <HornedBeast title="Rhino" 
-                imageUrl="public\black-rhino.jpg"
+                imageUrl="/black-rhino.jpg"
                 description="Black Rhinoceros. - worldwildlife.org" />
             </main>
         );
