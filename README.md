@@ -74,6 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Number and name of feature: #1: Display images
 
 Estimate of time needed to complete: 5 min
+
 Start time: 2:22
 
 Finish time: 2:24
@@ -109,3 +110,13 @@ Start time: 3:14
 Finish time: 3:53
 
 Actual time needed to complete: 39 min
+
+Number and name of feature: #1 Display a Modal
+
+Estimate of time needed to complete: 30 min
+
+Start time: 2:25
+
+Finish time: 3:13
+
+Actual time needed to complete: 48 min
