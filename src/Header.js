@@ -1,15 +1,15 @@
 import React from 'react';
 
-class Header extends React.Component{
-    constructor(props){
+class Header extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             isActive: false
         };
     };
 
-    setIsActive = () =>{
-        if(this.state.isActive){
+    setIsActive = () => {
+        if (this.state.isActive) {
             this.setState({
                 isActive: false
             })
@@ -20,12 +20,18 @@ class Header extends React.Component{
         }
     }
 
-    render(){
+    handleSearch = () => {
+
+    }
+
+    render() {
         const colorClass = this.state.isActive ? 'blue' : 'red';
-        return(
-            <header className={colorClass} onClick={this.setIsActive}>
-                <h1>{this.state.isActive ? 'Pointy Friends' : 'Horned Beasts'}</h1>
-            </header>
+        return (
+            <>
+                <header className={colorClass} onClick={this.setIsActive}>
+                    <h1>{this.state.isActive ? 'Pointy Friends' : 'Horned Beasts'}</h1>
+                </header>
+            </>
         );
     }
 }

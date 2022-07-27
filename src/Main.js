@@ -1,14 +1,18 @@
 import React from "react";
 import HornedBeast from './HornedBeast.js';
-import Beasts from './Data/Data.json';
-import { Container } from "react-bootstrap";
-import Row from 'react-bootstrap/Row';
+import { Container, Row } from "react-bootstrap";
 
 class Main extends React.Component{
     render(){
-        console.log(Beasts);
-        let mainBeasts = Beasts.map((element) => {
-            return (<HornedBeast title={element.title} imageUrl={element.image_url} description={element.description} />)});
+
+        let mainBeasts = this.props.Beasts.map((element, index) => {
+            return (<HornedBeast 
+                title={element.title}
+                key={index} 
+                imageUrl={element.image_url}
+                description={element.description} 
+                handleOnShowModal={this.props.handleOnShowModal}
+                />)});
         return(
             <main>
                 <Container fluid="md">

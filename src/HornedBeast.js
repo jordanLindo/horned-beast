@@ -15,11 +15,16 @@ class HornedBeast extends React.Component {
         });
     };
 
+    helperPicClick = () =>{
+        this.handleLikes();
+        this.props.handleOnShowModal(this.props);
+    };
+
     render() {
         return (
             <Col>
                 <h2>{this.props.title}</h2>
-                <img src={this.props.imageUrl} alt={this.props.title} title={this.props.title} onClick={this.handleLikes} />
+                <img src={this.props.imageUrl} alt={this.props.title} title={this.props.title} onClick={this.helperPicClick} />
                 <p>	&#9825;{this.state.likes}</p>
                 <p>{this.props.description}</p>
             </Col>
