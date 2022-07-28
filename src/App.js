@@ -44,9 +44,14 @@ class App extends React.Component {
             <Modal.Title>{this.state.selectBeast.title}
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <img src={this.state.selectBeast.imageUrl} alt={this.state.selectBeast.title} height="300px" />
-            <p>{this.state.selectBeast.description}</p>
+          <Modal.Body className='text-center'>
+            <img src={this.state.selectBeast.imageUrl} alt={this.state.selectBeast.title} style={{
+            height: "300px",
+            maxWidth: "450px"
+          }}  />
+            <p style={{
+              textAlign: 'left'
+            }}>{this.state.selectBeast.description}</p>
           </Modal.Body>
         </Modal>
       </>
