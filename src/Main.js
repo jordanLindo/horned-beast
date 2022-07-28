@@ -15,8 +15,8 @@ class Main extends React.Component{
                 />)});
         return(
             <main>
-                <Container fluid="md">
-                    <Row>
+                <Container>
+                    <Row lg={3} md={2} xs={1}>
                         {mainBeasts}
                     </Row>
                 </Container>

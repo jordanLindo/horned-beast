@@ -1,5 +1,6 @@
 import React from "react";
-import Col from 'react-bootstrap/Col';
+import { Card, Col } from "react-bootstrap";
+import './HornedBeast.css'
 
 class HornedBeast extends React.Component {
     constructor(props) {
@@ -15,18 +16,26 @@ class HornedBeast extends React.Component {
         });
     };
 
-    helperPicClick = () =>{
+    helperPicClick = () => {
         this.handleLikes();
         this.props.handleOnShowModal(this.props);
     };
 
     render() {
         return (
-            <Col>
-                <h2>{this.props.title}</h2>
-                <img src={this.props.imageUrl} alt={this.props.title} title={this.props.title} onClick={this.helperPicClick} />
-                <p>	&#9825;{this.state.likes}</p>
-                <p>{this.props.description}</p>
+            <Col className="mt-4">
+                <Card className="h-100 p-3 card">
+                    <Card.Title>
+                        {this.props.title}
+                    </Card.Title>
+                    <Card.Img className="m-auto" src={this.props.imageUrl} alt={this.props.title} title={this.props.title} onClick={this.helperPicClick} />
+                    <p>
+                        &#9825;{this.state.likes}
+                    </p>
+                    <p>
+                        {this.props.description}
+                    </p>
+                </Card>
             </Col>
         );
     }
