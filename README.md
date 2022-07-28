@@ -120,3 +120,13 @@ Start time: 2:25
 Finish time: 3:13
 
 Actual time needed to complete: 48 min
+
+Number and name of feature: #1 Filter by number of horns.
+
+Estimate of time needed to complete: 45 min
+
+Start time: 2:00
+
+Finish time: 2:47
+
+Actual time needed to complete: 47 min
