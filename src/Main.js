@@ -28,7 +28,7 @@ class Main extends React.Component {
         console.log(this.state);
     }
 
-    handleSearh = (event) => {
+    handleSearch = (event) => {
         let criteria = event.target.value;
         let result = this.props.Beasts;
         result = result.filter((val) => {
@@ -44,6 +44,10 @@ class Main extends React.Component {
 
     };
 
+    submitForm = (event) =>{
+        event.preventDefault();
+    }
+
     render() {
         let mainBeasts = this.state.filteredData.map((element, index) => {
             return (<HornedBeast
@@ -58,10 +62,10 @@ class Main extends React.Component {
             <main>
                 <Container>
                     <Row>
-                        <Form>
+                        <Form onSubmit={this.submitForm}>
                             <FormGroup>
                                 <Form.Control type="text" placeholder="Search"
-                                    onKeyUp={this.handleSearh}>
+                                    onKeyUp={this.handleSearch}>
                                 </Form.Control>
                             </FormGroup>
                             <Row lg={4} md={2}>
@@ -70,7 +74,11 @@ class Main extends React.Component {
                                 <FormSelect name="selected"
                                     onChange={this.handleSelect}
                                     className="md-2">
-                                    <option value='all'>All</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='100'>100</option>
+                                    <option value='all'>All</option>
+                                    <option value='1'>1</option>
+                                    <option value='2'>2</option>
+                                    <option value='3'>3</option>
+                                    <option value='100'>100</option>
                                 </FormSelect>
                             </FormGroup>
                             </Row>
